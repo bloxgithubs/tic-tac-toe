@@ -14,8 +14,8 @@ function handleCellClick(index) {
         const winningCombination = checkWin(currentPlayer);
         if (winningCombination) {
             setTimeout(() => {
-                alert(`${currentPlayer} wins!`);
                 drawWinningLine(winningCombination);
+                alert(`${currentPlayer} wins!`);
             }, 100);
         } else if (isDraw()) {
             alert(`It's a draw!`);
