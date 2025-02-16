@@ -17,6 +17,10 @@ function handleCellClick(index) {
                 alert(`${currentPlayer} wins!`);
                 drawWinningLine(winningCombination);
             }, 100);
+        } else if (isDraw()) {
+            setTimeout(() => {
+                alert(`It's a draw!`);
+            }, 100);
         } else {
             currentPlayer = currentPlayer === 'X' ? 'O' : 'X';
         }
@@ -29,6 +33,10 @@ function checkWin(player) {
             return board[index] === player;
         });
     });
+}
+
+function isDraw() {
+    return board.every(cell => cell !== '');
 }
 
 function drawWinningLine(combination) {
