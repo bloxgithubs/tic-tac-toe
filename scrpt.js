@@ -18,9 +18,7 @@ function handleCellClick(index) {
                 drawWinningLine(winningCombination);
             }, 100);
         } else if (isDraw()) {
-            setTimeout(() => {
-                alert(`It's a draw!`);
-            }, 100);
+            alert(`It's a draw!`);
         } else {
             currentPlayer = currentPlayer === 'X' ? 'O' : 'X';
         }
